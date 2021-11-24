@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <meta name="author" content="Simón Moreno">
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="CSS/hamburgers.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Swiper Js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    
+    <header class="w-10/12 flex justify-between lg:justify-start items-center mx-auto py-6">
+        <button class="hamburger hamburger--emphatic menu-btn" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <figure class="lg:w-1/5 w-auto">
+            <img src="images/logo.svg" alt="Sneakers Logo">
+        </figure>
+        <nav class="menu font-semibold">
+            <ul>
+                <li>
+                    <a class="relative hover:text-black focus:text-black menu-link" href="#">Collections</a>
+                </li>
+                <li>
+                    <a class="relative hover:text-black focus:text-black menu-link" href="#">Men</a>
+                </li>
+                <li>
+                    <a class="relative hover:text-black focus:text-black menu-link" href="#">Women</a>
+                </li>
+                <li>
+                    <a class="relative hover:text-black focus:text-black menu-link" href="#">About</a>
+                </li>
+                <li>
+                    <a class="relative hover:text-black focus:text-black menu-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <article class="lg:w-1/2 w-full flex justify-end items-center">
+            <figure class="flex lg:justify-center justify-end items-center mx-3 relative lg:w-auto md:w-1/2 w-full">
+                <div class="relative">
+                    <img id="icon-cart" class="cursor-pointer" src="images/icon-cart.svg" alt="Icon cart">
+                    <small id="cart__product" class="orange-bg px-2 rounded-xl absolute bottom-3 left-3 cart__show"></small>
+                </div>
+                <figcaption class="absolute lg:top-14 top-16 -right-7 bg-white flex flex-col justify-start items-center ancho h-auto rounded-lg shadow-2xl show pb-6">
+                    <p class="flex justify-start items-start w-full py-5 px-6 border-b border-gray-300 font-semibold">Cart</p>
+                    <p id="empty-card" class="flex justify-center items-center h-full color-grayish font-semibold py-16 hidden">Your cart is empty</p>
+                    <figure id="add-cart" class="flex justify-center items-center p-4">
+                        <img class="w-1/5 rounded-xl" src="images/image-product-1-thumbnail.jpg" alt="Sneakers product">
+                        <figcaption class="px-2">
+                            <p>Fall limited edition sneakers</p>
+                            <p class="color-grayish">$125.00 x <span id="count-product" class="mr-3"></span><span id="bill" class="font-bold text-black">$375.00</span></p>
+                        </figcaption>
+                        <img id="delete" class="cursor-pointer pl-2" src="images/icon-delete.svg" alt="Icon delete">
+                    </figure>
+                    <button id="checkout" class="orange-bg w-10/12 py-3 mt-1 rounded-xl">Chekout</button>
+                </figcaption>
+                <div class="lg:w-1/4 w-1/5 ml-8">
+                    <img class="border-2 border-transparent border-orange rounded-full cursor-pointer" src="images/image-avatar.png" alt="Avatar">
+                </div>
+            </figure>
+        </article>
+    </header>
+    
+    <hr class="w-10/12 mx-auto">
+
+    <main class="md:w-10/12 mx-auto flex flex-wrap items-start justify-center md:py-16">
+        <section class="xl:w-1/2 lg:p-8 pb-6 md:block hidden">
+            <article class="p-4">
+                <figure>
+                    <img class="rounded-2xl" src="images/image-product-1.jpg" alt="Sneakers">
+                </figure>
+            </article>
+            <article class="flex justify-center items-center">
+                <figure class="m-4 main__products rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-1-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 main__products rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-2-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 main__products rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-3-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 main__products rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-4-thumbnail.jpg" alt="Sneakers">
+                </figure>
+            </article>
+        </section>
+        <!-- Swiper HTML -->
+        <section class="swiper md:hidden block">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <figure class="swiper-slide">
+                    <img class="w-full h-auto" loading="lazy" src="images/image-product-1.jpg" alt="Sneakers">
+                </figure>
+                <figure class="swiper-slide">
+                    <img class="w-full h-auto" loading="lazy" src="images/image-product-2.jpg" alt="Sneakers">
+                </figure>
+                <figure class="swiper-slide">
+                    <img class="w-full h-auto" loading="lazy" src="images/image-product-3.jpg" alt="Sneakers">
+                </figure>
+                <figure>
+                    <img class="w-full h-auto" loading="lazy" src="images/image-product-4.jpg" alt="Sneakers">
+                </figure>
+                
+              </div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <img loading="lazy" src="images/icon-previous.svg" alt="Icon previous">
+            </div>
+            <div class="swiper-button-next">
+                <img loading="lazy" src="images/icon-next.svg" alt="Icon next">
+            </div>
+            
+        </section>
+        <!---->
+        <section class="xl:w-1/2 xl:px-10 xl:py-20 w-10/12 pb-16">
+            <article class="flex flex-col justify-start items-start">
+                <p class="tracking-widest uppercase pb-3 orange-color font-bold">Sneaker company</p>
+                <h1 class="lg:text-5xl text-3xl font-semibold lg:mb-10 mb-5">Fall Limited Edition Sneakers</h1>
+                <p class="mb-6 dark-grayish">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <div class="flex justify-start items-center mb-2">
+                    <p class="text-3xl font-bold mr-2">$125.00 </p>
+                    <span class="ml-2 orange-color orange-bg-pale px-2 font-bold rounded-lg">50%</span>
+                </div>
+                <span class="text-lg color-grayish font-semibold raya">$250.00</span>
+                <div class="mt-8 flex flex-wrap justify-start items-start w-full">
+                    <div class="flex lg:justify-center justify-around items-center light-grayish py-4 rounded-xl lg:w-1/3 w-full">
+                        <figure id="minus" class="px-5 rounded-tl-xl rounded-bl-xl cursor-pointer hover:opacity-75 minus">
+                            <img src="images/icon-minus.svg" alt="Icon minus">
+                        </figure>
+                        <span id="contador" class="px-5 font-semibold">0</span>
+                        <figure id="plus" class="px-5 rounded-tr-xl rounded-br-xl cursor-pointer hover:opacity-75 plus">
+                            <img src="images/icon-plus.svg" alt="Icon plus">
+                        </figure>
+                    </div>
+                    <div class="xl:ml-5 xl:mt-0 mt-4 w-full lg:w-3/5">
+                        <button id="add" class="flex justify-center items-center px-20 rounded-xl py-4 orange-bg shadow-lg font-semibold cursor-pointer hover:opacity-75 w-full">
+                            <img class="pr-4" src="images/icon-cart-white.svg" alt="Icon cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <aside class="lightbox md:flex hidden">
+        <section class="sm:w-2/3 lg:w-2/5 h-auto lightbox__img relative">
+            <article class="p-4">
+                <figure>
+                    <img class="rounded-2xl" src="images/image-product-1.jpg" alt="Sneakers">
+                </figure>
+            </article>
+            <article class="flex justify-center items-center">
+                <figure class="m-4 rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-1-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-2-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-3-thumbnail.jpg" alt="Sneakers">
+                </figure>
+                <figure class="m-4 rounded-2xl">
+                    <img class="rounded-xl" src="images/image-product-4-thumbnail.jpg" alt="Sneakers">
+                </figure>
+            </article>
+
+            <figure class="absolute w-full flex justify-between items-center h-full -top-16">
+                <img class="bg-white w-14 rounded-full py-4 px-5 cursor-pointer" src="images/icon-previous.svg" alt="Icon previous">
+                <img class="bg-white w-14 rounded-full py-4 px-5 cursor-pointer" src="images/icon-next.svg" alt="Icon next">
+            </figure>
+
+            <figure class="absolute -top-2 right-0 cursor-pointer close">
+                <img src="images/icon-close.svg" alt="Icon close">
+            </figure>
+
+        </section>
+    </aside>
+
+    <script type="module" src="Js/main.js"></script>
+</body>
+</html>
